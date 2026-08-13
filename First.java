@@ -1,19 +1,17 @@
-// Thread Creation using Thread class.
-
-public class First {
+public class First{
     public static void main(String[] args) {
         MyThread t1 = new MyThread();
-        System.out.println("Current Thread - " + Thread.currentThread().getName());
+        System.out.println("Current thread running is - " + Thread.currentThread().getName());
         t1.start();
     }
 }
 
 class MyThread extends Thread{
-    @Override
+    @Override 
     public void run(){
-        System.out.println("Current Thread - " + Thread.currentThread().getName());
+        System.out.println("Current thread running is - " + Thread.currentThread().getName());
         for(int i=0;i<100;i++){
-            System.out.println("Welcome to multithreading!");
+            System.out.println("Thread using thread class is running!");
         }
     }
 }

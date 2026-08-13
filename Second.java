@@ -4,20 +4,20 @@ Thread Creation using Runnable interface and benefits of using Runnable interfac
 
 public class Second{
     public static void main(String[] args) {
-        
         MyRunnable r1 = new MyRunnable();
         Thread t1 = new Thread(r1);
-        Thread t2 = new Thread(r1);
+        System.out.println("Current thread running is - " + Thread.currentThread().getName());
         t1.start();
-        t2.start();
     }
 }
+
 
 class MyRunnable implements Runnable{
     @Override
     public void run(){
+        System.out.println("Current thread running is - " + Thread.currentThread().getName());
         for(int i=0;i<100;i++){
-            System.out.println("Thread - " + Thread.currentThread().getName()+ " is running.");
+            System.out.println("Thread using runnable interface is running!");
         }
     }
 }
