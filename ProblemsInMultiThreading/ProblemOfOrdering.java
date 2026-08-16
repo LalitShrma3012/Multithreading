@@ -26,4 +26,6 @@ public class ProblemOfOrdering {
         t2.start();
     }
 
+    // To resolve this either you can use synchronize or volatile.
+
 }
