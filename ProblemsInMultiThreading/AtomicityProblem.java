@@ -13,7 +13,7 @@ public class AtomicityProblem{
             }
         );
 
-
+  
         Thread t2 = new Thread(
             () -> {
                 System.out.println(Thread.currentThread().getName());
