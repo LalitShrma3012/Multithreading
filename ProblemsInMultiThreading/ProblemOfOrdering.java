@@ -3,8 +3,7 @@ package ProblemsInMultiThreading;
 public class ProblemOfOrdering {
 
     static int x = 0;
-    static 
-    boolean flag = false;
+    static boolean flag = false;
     public static void main(String[] args){
         
         Thread t1 = new Thread(

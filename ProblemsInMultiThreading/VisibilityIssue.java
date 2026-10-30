@@ -1,14 +1,12 @@
-package ProblemsInMultiThreading;
+package ProblemsInMultiThreading;  
 
-public class VisibilityIssue {
+public class VisibilityIssue{
 
-    static volatile boolean flag = false;
-    // volatile keyword makes this flag volatile means whichever thread wants to read the value of flag, always read from RAM.
+    static boolean flag = false;
     public static void main(String[] args) {
-        
-        
+    
         Thread t1 = new Thread(
-            () -> {
+            ()->{
                 try{
                     Thread.sleep(500);
                 }catch(Exception e){}
@@ -19,9 +17,8 @@ public class VisibilityIssue {
         Thread t2 = new Thread(
             ()->{
                 while(!flag){
-                    // System.out.println("Thread 2 is running!!!");
+                    // System.out.println("Visibility Issue");
                 }
-                System.out.println("Thread 2 is finished!");
             }
         );
 
